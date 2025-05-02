@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>магазин </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 80px;
+      background-color: #6d6d6d;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+    button {
+      padding: 50px 70px;
+      margin: 0 15px;
+      font-size: 36px;
+      cursor: pointer;
+      border: none;
+      background-color: #007BFF;
+      color: black;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .assortment {
+      display: none;
+      margin-top: 30px;
+    }
+    .assortment img {
+      width: 150px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>магазин </h1>
+  <p>Оберіть асортимент:</p>
+
+  <button onclick="showAssortment('assortment1')">Асортимент 1</button>
+  <button onclick="showAssortment('assortment2')">Асортимент 2</button>
+
+  <div id="assortment1" class="assortment">
+    <img src="https://images.unsplash.com/photo-1513708928670-4a5f9b4e7c1a?auto=format&fit=crop&w=150&q=80" alt="Товар 1" />
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=150&q=80" alt="Товар 2" />
+  </div>
+
+  <div id="assortment2" class="assortment">
+    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=150&q=80" alt="Товар 3" />
+    <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=150&q=80" alt="Товар 4" />
+  </div>
+
+  <script>
+    function showAssortment(id) {
+      document.getElementById('assortment1').style.display = 'none';
+      document.getElementById('assortment2').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
